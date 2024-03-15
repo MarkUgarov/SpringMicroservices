@@ -1,4 +1,4 @@
-package de.adesso.uebung1;
+package de.adesso.adessomholzmannmicroservice;
 
 import org.springframework.web.bind.annotation.GetMapping;
 

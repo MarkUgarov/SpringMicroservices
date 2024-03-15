@@ -1,4 +1,4 @@
-package de.adesso.adessibmarleyloadbalancerclient;
+package de.adesso.mholzmannloadbalancerclient;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,8 +15,9 @@ public class LoadBalancerRestController {
     }
 
     @GetMapping("/")
-    public Mono<String> hi() {
-        return loadBalancedWebClientBuilder.build().get().uri("http://adessi/")
+    public Mono<String> getMono() {
+        return loadBalancedWebClientBuilder.build()
+                .get().uri("http://adessi/")
                 .retrieve().bodyToMono(String.class);
     }
 }
