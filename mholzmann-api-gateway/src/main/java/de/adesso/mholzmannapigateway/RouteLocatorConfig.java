@@ -12,7 +12,7 @@ public class RouteLocatorConfig {
     public RouteLocator routes(RouteLocatorBuilder routeLocatorBuilder) {
         return routeLocatorBuilder.routes()
                 .route("rewritepath2_test", route -> route
-                        .order(1)
+                        .order(0)
                         .path("/mein/firstName")
                         .filters(f ->
                                 f.rewritePath("/mein/firstName", "/adessi/lastName")
@@ -20,7 +20,7 @@ public class RouteLocatorConfig {
                         .uri("http://localhost:8091")
                 )
                 .route("rewritepath_test", route -> route
-                        .order(0)
+                        .order(1)
                         .path("/mein/**")
                         .filters(f ->
                                 f.rewritePath("/mein/(?<segment>.*)", "/adessi/$\\{segment}")
