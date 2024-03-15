@@ -1,7 +1,13 @@
 # Getting Started
 
+Rerouting:
 http://localhost:8763/mein/cc
 http://localhost:8763/mein/firstName
+etc.
+
+Über Filter: 
+http://localhost:8763/meinsAuch/cc
+http://localhost:8763/meinsAuch/firstName
 etc.
 
 ### Reference Documentation
