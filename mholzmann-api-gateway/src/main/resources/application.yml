@@ -1,0 +1,12 @@
+server:
+  port: 8763
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: rewritepath_test
+          predicates:
+            - Path=/mein/**
+          filters:
+            - RewritePath=/mein/(?<segment>.*), /adessi/$\{segment}
+          uri: http://localhost:8091
