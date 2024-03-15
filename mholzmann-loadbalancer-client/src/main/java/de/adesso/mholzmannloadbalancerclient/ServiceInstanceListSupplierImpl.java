@@ -23,6 +23,7 @@ public class ServiceInstanceListSupplierImpl implements ServiceInstanceListSuppl
     @Override
     public Flux<List<ServiceInstance>> get() {
         String serviceId = getServiceId();
+        // über einen DiscoveryClient kann das ganze auch automatisiert werden
         return Flux.just(List.of(
                 new DefaultServiceInstance(serviceId + "1", serviceId, "localhost", 8091, false),
                 new DefaultServiceInstance(serviceId + "2", serviceId, "localhost", 8092, false),
